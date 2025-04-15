@@ -1,7 +1,10 @@
 # Time Series Clustering
 
-This codebase uses image encoders (VICReg) to generate time series embeddings for
+This codebase uses image encoders to generate time series embeddings for
 clustering.
+
+The image encoders are trained in an unsupervised manner with the VICReg
+objective. [[1]](#1)
 
 ## Installation
 
@@ -9,7 +12,7 @@ Install from the `requirements.txt`
 
 ## Dataset
 
-You must download the `UCRArchive_2018` [[1]](#1) zipped dataset from
+You must download the `UCRArchive_2018` [[2]](#2) zipped dataset from
 [here](https://www.cs.ucr.edu/%7Eeamonn/time_series_data_2018/). Then unzip in your downloaded directory and symlink it into the `data` directory.
 
 ```bash
@@ -52,6 +55,8 @@ benchmarking this method possible.
 The VICReg training code implementation was borrowed from https://github.com/imbue-ai/self_supervised
 
 ## References
-
 <a id="1">[1]</a> 
+Bardes, Adrien, Jean Ponce, and Yann LeCun. "Vicreg: Variance-invariance-covariance regularization for self-supervised learning." arXiv preprint arXiv:2105.04906 (2021).
+
+<a id="2">[2]</a> 
 Hoang Anh Dau, Eamonn Keogh, Kaveh Kamgar, Chin-Chia Michael Yeh, Yan Zhu, Shaghayegh Gharghabi , Chotirat Ann Ratanamahatana, Yanping Chen, Bing Hu, Nurjahan Begum, Anthony Bagnall , Abdullah Mueen, Gustavo Batista, & Hexagon-ML (2019). The UCR Time Series Classification Archive. URL https://www.cs.ucr.edu/~eamonn/time_series_data_2018/ 
